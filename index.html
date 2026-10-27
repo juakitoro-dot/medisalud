@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Servicios Médicos y Sanitarios a Domicilio | Atención Profesional</title>
+    
+    <!-- SEO Meta Tags Gratuitos -->
+    <meta name="description" content="Servicios sanitarios profesionales a domicilio: Enfermería, Fisioterapia, Podología y Cuidado de Mayores. Atención rápida y garantizada.">
+    <meta name="keywords" content="servicios medicos, enfermeria a domicilio, fisioterapia en casa, podologia, cuidado de mayores">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph (SEO Redes Sociales) -->
+    <meta property="og:title" content="Servicios Médicos Profesionales a Domicilio">
+    <meta property="og:description" content="Atención médica y enfermería a domicilio con profesionales colegiados. Solicita información sin compromiso.">
+    <meta property="og:type" content="website">
+
+    <!-- Tailwind CSS desde CDN para demostración -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Iconos Lucide -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <!-- Schema.org Datos Estructurados para SEO Médico Local -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "MedicalBusiness",
+      "name": "Servicios Médicos Profesionales",
+      "description": "Atención sanitaria a domicilio y consulta especializada",
+      "telecommute": "True",
+      "medicalSpecialty": ["Nursing", "Physiotherapy", "Podiatry"]
+    }
+    </script>
+</head>
+<body class="bg-slate-50 text-slate-800 font-sans antialiased flex flex-col min-h-screen">
+
+    <!-- HEADER / NAVEGACIÓN -->
+    <header class="sticky top-0 z-40 bg-white/95 backdrop-blur-md shadow-sm border-b border-slate-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <!-- Logo -->
+            <div class="flex items-center space-x-3">
+                <div class="bg-blue-600 text-white p-2.5 rounded-xl shadow-md">
+                    <i data-lucide="heart-pulse" class="w-6 h-6"></i>
+                </div>
+                <span class="text-xl font-bold text-slate-900 tracking-tight">MediSalud <span class="text-blue-600">Pro</span></span>
+            </div>
+
+            <!-- Contacto Directo & Acceso Admin -->
+            <div class="flex items-center space-x-4">
+                <a href="tel:900000000" class="hidden md:flex items-center space-x-2 text-slate-600 hover:text-blue-600 text-sm font-semibold transition">
+                    <i data-lucide="phone" class="w-4 h-4 text-blue-600"></i>
+                    <span>900 000 000</span>
+                </a>
+                
+                <!-- Acceso Micro-CRM (Demostración Cliente) -->
+                <button onclick="toggleAdminModal()" class="px-3.5 py-2 text-xs font-medium text-slate-500 hover:text-slate-900 border border-slate-200 rounded-lg hover:bg-slate-100 transition flex items-center gap-1.5">
+                    <i data-lucide="lock" class="w-3.5 h-3.5"></i>
+                    <span>Panel CRM</span>
+                </button>
+
+                <a href="#contacto" class="bg-blue-600 hover:bg-blue-700 text-white px-5 py-2.5 rounded-xl text-sm font-semibold shadow-md shadow-blue-500/20 transition">
+                    Solicitar Cita
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <main class="flex-grow">
+        <!-- HERO SECTION -->
+        <section class="relative bg-gradient-to-b from-blue-50/60 via-white to-slate-50 py-16 md:py-24 overflow-hidden">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid md:grid-cols-2 gap-12 items-center">
+                <div>
+                    <span class="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-semibold bg-blue-100 text-blue-700 mb-6">
+                        <i data-lucide="shield-check" class="w-4 h-4"></i> Profesionales Sanitarios Colegiados
+                    </span>
+                    <h1 class="text-4xl sm:text-5xl font-extrabold text-slate-900 tracking-tight leading-tight mb-6">
+                        Tu salud en las mejores manos, <span class="text-blue-600">cuando lo necesitas.</span>
+                    </h1>
+                    <p class="text-lg text-slate-600 mb-8 leading-relaxed">
+                        Atención médica y cuidados de enfermería a domicilio o en consulta. Rápido, seguro y adaptado a tus necesidades particulares.
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-4">
+                        <a href="#contacto" class="inline-flex justify-center items-center px-6 py-3.5 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-xl shadow-lg shadow-blue-600/25 transition">
+                            Solicitar Servicio
+                        </a>
+                        <button onclick="openWhatsappModal()" class="inline-flex justify-center items-center px-6 py-3.5 bg-emerald-50 text-emerald-700 hover:bg-emerald-100 border border-emerald-200 font-semibold rounded-xl transition gap-2">
+                            <i data-lucide="message-circle" class="w-5 h-5 text-emerald-600"></i> Consulta por WhatsApp
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Imagen Principal -->
+                <div class="relative">
+                    <div class="absolute -inset-1 bg-gradient-to-r from-blue-600 to-teal-400 rounded-3xl blur-xl opacity-20"></div>
+                    <img src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=800&q=80" alt="Doctora atendiendo consulta" class="relative rounded-2xl shadow-2xl object-cover w-full h-[400px]">
+                </div>
+            </div>
+        </section>
+
+        <!-- SERVICIOS PRINCIPALES -->
+        <section class="py-16 bg-white">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center max-w-2xl mx-auto mb-12">
+                    <h2 class="text-3xl font-bold text-slate-900 mb-3">Servicios Sanitarios Especializados</h2>
+                    <p class="text-slate-600">Ofrecemos cobertura médica integral ajustada a tus requerimientos.</p>
+                </div>
+
+                <div class="grid md:grid-cols-3 gap-8">
+                    <!-- Servicio 1 -->
+                    <div class="p-6 bg-slate-50 border border-slate-100 rounded-2xl hover:shadow-lg transition">
+                        <div class="w-12 h-12 bg-blue-100 text-blue-600 rounded-xl flex items-center justify-center mb-5">
+                            <i data-lucide="activity" class="w-6 h-6"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-slate-9
